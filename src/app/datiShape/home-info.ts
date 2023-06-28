@@ -2,7 +2,7 @@ export class HomeInfo {
 
   nome?: string;
   capitale?: string;
-  moneta?: string;
+  moneta?: string[];
   latitudine?: number;
   longitudine?: number;
   regione?: string;
@@ -14,7 +14,7 @@ export class HomeInfo {
   zonaOraria?: string;
   dominio?: string;
   area?: number;
-  constructor(nome: string, capitale: string, moneta: string, latitudine: number, longitudine: number, regione: string, diminutivo: string,
+  constructor(nome: string, capitale: string, moneta: string[], latitudine: number, longitudine: number, regione: string, diminutivo: string,
     bandiera: string, lingua: string, googleMaps: string, popolazione: number, zonaOraria: string, dominio: string, area: number) {
 
     this.nome = nome;

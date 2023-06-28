@@ -17,10 +17,12 @@ export class InfoPaesiService {
     return this.http.get<any>(apiUrl).pipe(
       map((response: any) => {
         const item = response[0];
+        const currencies = item.currencies || {};
+        const moneta = Object.keys(currencies).map((key: string) => currencies[key].name);
         const info: HomeInfo = {
           nome: item.name.common,
           capitale: item.capital,
-          moneta: item.currencies,
+          moneta: moneta,
           latitudine: item.latlng[0],
           longitudine: item.latlng[1],
           regione: item.region,
