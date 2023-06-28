@@ -11,15 +11,15 @@ export class InfoPaesiService {
 
   constructor(private http: HttpClient) { }
 
-  url: string = "https://restcountries.com/v3.1/name/italy"
+  url: string = "https://restcountries.com/v3.1/all"
 
-  getInfo(): Observable<HomeInfo[]> {
-    return this.http.get<HomeInfo[]>(this.url).pipe(
+  getInfo(): Observable<any[]> {
+    return this.http.get<any[]>(this.url).pipe(
       map((Response: any[]) => {
         return Response.map(item => {
-          const info = {
+          const info: HomeInfo = {
             nome: item.name.common,
-            capitale: item.capital[0],
+            capitale: item.capital,
             moneta: item.currencies,
             latitudine: item.latlng[0],
             longitudine: item.latlng[1],
