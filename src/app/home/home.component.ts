@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { InfoPaesiService } from '../data/info-paesi.service';
 import { HomeInfo } from '../datiShape/home-info';
 
@@ -7,15 +7,22 @@ import { HomeInfo } from '../datiShape/home-info';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent {
-  data: HomeInfo[] = [];
+export class HomeComponent implements OnInit {
+  data: HomeInfo | null = null;
+  paese: string = "italy";
 
-  constructor(private info: InfoPaesiService) {
-    this.info.getInfo().subscribe(response => {
+
+  constructor(private info: InfoPaesiService) { }
+
+  ngOnInit(): void {
+    this.getInfoByPaese(this.paese);
+  }
+
+  getInfoByPaese(paese: string) {
+    this.info.getInfo(paese).subscribe(response => {
       this.data = response;
       console.log(this.data);
     });
   }
 }
-
 

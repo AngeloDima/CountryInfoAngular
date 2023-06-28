@@ -1,7 +1,9 @@
 <h1>Info Paese</h1>
 
+<input type="text" [(ngModel)]="paese">
+<button (click)="getInfoByPaese(paese)">Cerca</button>
+
+
 <div *ngIf="data">
-  <div *ngFor="let paese of data">
-    <h2> {{ paese.nome }} </h2>
-  </div>
+  <h2>{{ data.nome }}</h2>
 </div>
