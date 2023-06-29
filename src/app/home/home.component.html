@@ -4,15 +4,26 @@
 <button (click)="getInfoByPaese(paese)">Cerca</button>
 
 
-<div *ngIf="data">
-  <h2>Nome: {{ data.nome }}</h2>
-  <h2>Diminutivo: {{ data.diminutivo }} </h2>
-  <p>Capitale: <strong>{{ data.capitale![0] }}</strong></p>
-  <img [src]="data.bandiera" alt="">
-  <p>Popolazione: <strong>{{ data.popolazione }}</strong> </p>
-  <p>Moneta: <strong>{{ data.moneta }}</strong> </p>
-  <p>Cordinate: LAT= <strong>{{ data.latitudine }}</strong> LONG= <strong>{{ data.longitudine }}</strong> </p>
-  <p>Regione: <strong>{{ data.regione }}</strong> </p>
-  <p>Zona Oraria: <strong>{{ data.zonaOraria }}</strong> </p>
-
+<div *ngIf="data" class="Conteiner">
+  <div class="box-content">
+    <div class="up">
+      <img [src]="data.bandiera" alt="bandiera paese = {{data.nome}}">
+    </div>
+    <div class="center">
+      <h2>Nome: {{ data.nome }}</h2>
+    </div>
+    <div class="down">
+      <div class="sx">
+        <p>Capitale: <strong>{{ data.capitale![0] }}</strong></p>
+        <p>Regione: <strong>{{ data.regione }}</strong> </p>
+        <p>Moneta: <strong>{{ data.moneta }}</strong> </p>
+        <p>Popolazione: <strong>{{ data.popolazione }}</strong> </p>
+      </div>
+      <div class="dx">
+        <h2>Diminutivo: {{ data.diminutivo }} </h2>
+        <p>Cordinate: LAT= <strong>{{ data.latitudine }}</strong> LONG= <strong>{{ data.longitudine }}</strong> </p>
+        <p>Zona Oraria: <strong>{{ data.zonaOraria }}</strong> </p>
+      </div>
+    </div>
+  </div>
 </div>
