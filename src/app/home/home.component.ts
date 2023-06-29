@@ -19,10 +19,22 @@ export class HomeComponent implements OnInit {
   }
 
   getInfoByPaese(paese: string) {
+    // Chiamiamo il metodo getInfo() sull'oggetto 'info' per ottenere le informazioni sul paese specificato
     this.info.getInfo(paese).subscribe(response => {
-      this.data = response;
-      console.log(this.data);
+      // Controlliamo se il nome ricevuto dalla risposta è diverso dal nome presente nei dati correnti
+      if (this.data?.nome !== response.nome) {
+        // Se i nomi sono diversi, impostiamo 'data' su null
+        this.data = null;
+        // Attendiamo 100 millisecondi utilizzando setTimeout()
+        setTimeout(() => {
+          // Assegniamo la risposta a 'data' dopo l'attesa
+          this.data = response;
+        }, 100);
+      }
     });
   }
+
+
+
 }
 

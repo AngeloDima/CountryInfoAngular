@@ -1,13 +1,13 @@
-<h1>Info Paese</h1>
+<div class="container-controllo">
+  <input type="text" [(ngModel)]="paese">
+  <button (click)="getInfoByPaese(paese)">Cerca</button>
+</div>
 
-<input type="text" [(ngModel)]="paese">
-<button (click)="getInfoByPaese(paese)">Cerca</button>
 
-
-<div *ngIf="data" class="Conteiner">
+<div *ngIf="data" class="Container">
   <div class="box-content">
     <div class="up">
-      <img [src]="data.bandiera" alt="bandiera paese = {{data.nome}}">
+      <img [src]="data.bandiera" alt="bandiera paese = {{data.nome}}" [ngClass]="{'AnimateIMG': data}">
     </div>
     <div class="center">
       <h2>Nome: {{ data.nome }}</h2>
