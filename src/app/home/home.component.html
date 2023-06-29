@@ -5,7 +5,14 @@
 
 
 <div *ngIf="data">
-  <h2>{{ data.nome }}</h2>
-  {{ data.capitale![0] }} <br>
-  {{ data.moneta }}
+  <h2>Nome: {{ data.nome }}</h2>
+  <h2>Diminutivo: {{ data.diminutivo }} </h2>
+  <p>Capitale: <strong>{{ data.capitale![0] }}</strong></p>
+  <img [src]="data.bandiera" alt="">
+  <p>Popolazione: <strong>{{ data.popolazione }}</strong> </p>
+  <p>Moneta: <strong>{{ data.moneta }}</strong> </p>
+  <p>Cordinate: LAT= <strong>{{ data.latitudine }}</strong> LONG= <strong>{{ data.longitudine }}</strong> </p>
+  <p>Regione: <strong>{{ data.regione }}</strong> </p>
+  <p>Zona Oraria: <strong>{{ data.zonaOraria }}</strong> </p>
+
 </div>
