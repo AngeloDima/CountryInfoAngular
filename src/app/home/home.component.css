@@ -76,15 +76,21 @@
 /* ---------------------PROVE-------------------- */
 
 .AnimateIMG{
-  animation: slideInAnimation 0.5s ease-in-out;
+  animation: slideInAnimation 1s cubic-bezier(.2,.11,.59,1.33);
 }
 
 
 @keyframes slideInAnimation {
   0% {
-    transform: translateX(-100%);
+    transform: translateX(-150%);
+    opacity: 0%;
+  }
+  80% {
+    transform: translateX(30%);
+    opacity: 90%;
   }
   100% {
-    transform: translateX(0);
+    transform: translateX(0%);
+    opacity: 100%;
   }
 }
