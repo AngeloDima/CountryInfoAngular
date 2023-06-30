@@ -29,7 +29,7 @@ export class HomeComponent implements OnInit {
         setTimeout(() => {
           // Assegniamo la risposta a 'data' dopo l'attesa
           this.data = response;
-        }, 100);
+        }, 0);
       }
     });
   }
