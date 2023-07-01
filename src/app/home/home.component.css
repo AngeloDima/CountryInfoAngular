@@ -68,6 +68,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+
 }
 
 .down p{
@@ -75,13 +76,14 @@
 }
 
 .down .dx{
-  width: 50%;
+  min-width: 50%;
 
   background-color: rgb(0, 173, 115);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+
 
 }
 /* -------------------CONTROLLO------------------------ */

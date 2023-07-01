@@ -9,7 +9,7 @@ import { HomeInfo } from '../datiShape/home-info';
 })
 export class HomeComponent implements OnInit {
   data: HomeInfo | null = null;
-  paese: string = "italy";
+  paese: string = "russia";
 
 
   constructor(private info: InfoPaesiService) { }
