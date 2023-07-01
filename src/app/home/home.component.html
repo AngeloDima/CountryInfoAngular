@@ -1,11 +1,13 @@
-<div class="container-controllo">
-  <input type="text" [(ngModel)]="paese">
-  <button (click)="getInfoByPaese(paese)">Cerca</button>
-</div>
-
-
 <div *ngIf="data" class="Container">
   <div class="box-content">
+
+
+    <div class="container-controllo">
+      <input type="text" [(ngModel)]="paese" placeholder="Inserisci un paese...">
+      <button (click)="getInfoByPaese(paese)">Cerca</button>
+    </div>
+
+
     <div class="up">
       <img [src]="data.bandiera" alt="bandiera paese = {{data.nome}}" [ngClass]="{'AnimateIMG': data}">
     </div>
@@ -14,15 +16,16 @@
     </div>
     <div class="down">
       <div class="sx">
-        <p>Capitale: <strong>{{ data.capitale![0] }}</strong></p>
-        <p>Regione: <strong>{{ data.regione }}</strong> </p>
-        <p>Moneta: <strong>{{ data.moneta }}</strong> </p>
-        <p>Popolazione: <strong>{{ data.popolazione }}</strong> </p>
+        <p [ngClass]="{'animateInfo': data}">Capitale: <strong>{{ data.capitale![0] }}</strong></p>
+        <p [ngClass]="{'animateInfo': data}">Regione: <strong>{{ data.regione }}</strong> </p>
+        <p [ngClass]="{'animateInfo': data}">Moneta: <strong>{{ data.moneta }}</strong> </p>
+        <p [ngClass]="{'animateInfo': data}">Popolazione: <strong>{{ data.popolazione }}</strong> </p>
       </div>
       <div class="dx">
-        <p>Diminutivo: <strong>{{ data.diminutivo }}</strong> </p>
-        <p>Cordinate: LAT= <strong>{{ data.latitudine }}</strong> LONG= <strong>{{ data.longitudine }}</strong> </p>
-        <p>Zona Oraria: <strong>{{ data.zonaOraria }}</strong> </p>
+        <p [ngClass]="{'animateInfo': data}">Diminutivo: <strong>{{ data.diminutivo }}</strong> </p>
+        <p [ngClass]="{'animateInfo': data}">Cordinate: LAT= <strong>{{ data.latitudine }}</strong> LONG= <strong>{{
+            data.longitudine }}</strong> </p>
+        <p [ngClass]="{'animateInfo': data}">Zona Oraria: <strong>{{ data.zonaOraria }}</strong> </p>
       </div>
     </div>
   </div>

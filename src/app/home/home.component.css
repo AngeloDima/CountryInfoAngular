@@ -1,7 +1,7 @@
 .Container{
   width: 100%;
-
-  background-color: rgba(60, 255, 0, 0.075);
+  padding: 20px;
+  background-color: rgb(253, 253, 246);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,6 +20,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 30px;
+  border-bottom: 1px solid #00000026;
 }
 
 .up img{
@@ -49,57 +51,102 @@
 
 .center{
   width: 100%;
-
-  background-color: rgb(0, 152, 0);
+  /* background-color: rgb(0, 152, 0); */
   text-align: center;
+  box-shadow: 5px 5px 7px 0px #0000001f;
 }
+
+
 .down{
   width: 100%;
-
-  background-color: rgb(0, 168, 0);
+  /* background-color: rgb(0, 168, 0); */
   display: flex;
+  margin-top: 30px;
+  padding: 10px 0px;
+  box-shadow: 5px 5px 7px 0px #0000001f;
+
 }
 
 
 .down .sx{
   width: 50%;
-  background-color: aquamarine;
+  /* background-color: aquamarine; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-right: 1px solid rgba(0, 0, 0, 0.226);
+
+}
+
+
+
+.down .dx{
+  flex-grow: 1;
+  /* background-color: rgb(0, 173, 115); */
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 
 }
+
+
 
 .down p{
   padding: 10px 0px;
 }
 
-.down .dx{
-  min-width: 50%;
 
-  background-color: rgb(0, 173, 115);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
 
+.animateInfo{
+  animation: pInfo 1s linear;
+}
+
+
+@keyframes pInfo {
+  0% {
+    transform: scale(0%);
+
+  }
+  100% {
+    transform: scale(100%);
+
+  }
 
 }
+
+
+
+
+
+
 /* -------------------CONTROLLO------------------------ */
 
 
 .container-controllo{
-  width: 100%;
 
-  background-color: aqua;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+input{
+  width: 450px;
+  padding: 14px 16px;
+  border-radius: 15px 0px 0px 15px;
+  border: none;
+  background-color: rgb(216, 216, 216);
+}
+button{
+  padding: 14px 20px;
+  border: none;
+  border-radius: 0px 15px 15px 0px;
+}
 
-
+button:active{
+  background-color: rgb(160, 160, 160);
+}
 
 
 
